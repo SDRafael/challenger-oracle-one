@@ -1,0 +1,207 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    --cor-principal: #ffffff;
+    --cor-botao-hover: #0A3871;
+    --cor-bordas: #2e2e31;
+    --cor-secundaria: #cac7c7;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-principal);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0px;
+    gap: 0px;
+}
+#imagem {
+    width: 300px;
+    height: 400px;
+    background-image: url('/img/High quality products 1 1.svg');
+    background-size: cover; 
+    background-position:center; 
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    flex-shrink: 0;
+}
+#aTop {
+    font-size: 50px;
+    margin: 0px;
+    margin-left: 50px;
+    color: var(--cor-botao-hover);
+}
+#fullalingh {
+    display: flex;
+    flex-direction: column;
+    align-items:end; 
+    justify-content: space-between; 
+    width: 60%;
+    max-width: 100%;
+    margin-right: 0%;
+    margin-left: 20px;
+    padding: 0px;
+    gap: 0px;
+}
+#fullScreen {
+    display: flex; 
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: calc(100vh - 60px); /* Ajusta a altura considerando o header */
+    box-sizing: border-box;
+    
+}
+#inputtext {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 90%;
+    width: 100%;
+    background-color: var(--cor-principal);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--cor-bordas);
+    gap: 20px;
+}
+#principal {
+    color: var(--cor-botao-principal);
+    line-height: 1.6;
+    border-radius: 12px;
+    width: 100%;
+    height: 350px; 
+    padding: 45px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    scrollbar-width: none;
+}
+
+
+
+#emtela {
+    display: none; 
+    align-items:flex-start;
+    border-radius: 12px;
+    overflow: auto; 
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    width: 100%; 
+    height: 350px;
+    padding: 45px;
+    background-color: var(--cor-principal); 
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    word-wrap: break-word;
+    scrollbar-width: none;
+    
+}
+
+#copiar {
+    display: none; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-botao-hover);
+    color: var(--cor-bordas);
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+button:hover {
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-principal);
+}
+
+
+/* Media Query para Tablet (760x1174) */
+@media (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    header, main {
+        display: flex;
+        align-items: flex-start;
+        
+    }
+    main {
+        flex-direction: column; /* Alinha elementos em coluna em telas menores */
+        align-items: center; /* Centraliza conteúdo no centro */
+    }
+    
+    #inputtext {
+        display: flex; /* Define o layout em linha para os filhos */
+        flex-direction: column;
+        
+    }
+    #fullScreen, #imagem {
+        width: 80%; /* Ajusta a largura dos contêineres para telas menores */
+        max-width: 600px;
+    }
+    #imagem {
+        margin-left: 0; /* Remove margem à esquerda para centralizar */
+        margin-top: 20px; /* Adiciona margem superior para espaçamento */
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+    }
+}
+
+/* Media Query para Celular (375x933) */
+@media (max-width: 768px) {
+    #fullScreen {
+        width: 90%; 
+        max-width: 100%; 
+    }
+    #inputtext, .buttons {
+        width: 100%;
+    }
+    #imagem {
+        margin-left: 0;
+        margin-top: 20px; 
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+}
