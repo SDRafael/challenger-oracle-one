@@ -16,7 +16,7 @@ btnDecoder.addEventListener('click', function(){
 });
 
 btnCopiar.addEventListener('click', function() {
-    copiarTexto(); // Função para copiar o texto
+    copiarTexto(); 
 });
 
 
@@ -65,10 +65,6 @@ function decodeH1(){
             i++;
         }
         for(key in decode){
-            /*while(textAnalises.includes(key)){
-                textAnalises = textAnalises.replace(key, decode[key]);
-
-            }*/
             textAnalises = textAnalises.split(key).join(decode[key]);
 
         }
@@ -80,15 +76,14 @@ function decodeH1(){
 }
 function VisibilidadeCopiarButton() {
     if (emTela.innerHTML.trim() !== "") {
-        btnCopiar.style.display = "block"; // Mostra o botão
-        emTela.style.display = "flex"; // Mostra o h1
+        btnCopiar.style.display = "block";
+        emTela.style.display = "flex"; 
     } else {
-        btnCopiar.style.display = "none"; // Esconde o botão se não houver texto
+        btnCopiar.style.display = "none";
         emTela.style.display = "none";
     }
 }
 function copiarTexto() {
-    // Cria um elemento de texto temporário para copiar o texto
     const textoParaCopiar = emTela.innerText;
     navigator.clipboard.writeText(textoParaCopiar);
 }
